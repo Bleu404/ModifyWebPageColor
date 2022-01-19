@@ -2,7 +2,7 @@
 // @name           修改网页背景颜色
 // @namespace      https://greasyfork.org/zh-CN/users/798733-bleu
 // @description    将网页背景颜色修改为土黄色，配合chrome主题Mira! Let's Go食用更佳。
-// @version        1.0
+// @version        1.0.1
 // @author         bleu
 // @compatible     edge Tampermonkey
 // @compatible     chrome Tampermonkey

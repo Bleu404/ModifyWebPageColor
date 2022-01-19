@@ -17,7 +17,7 @@
     var color = "#F6F4EC"
     var Lcolor = "";
     var customMode = {
-        "greasyfork.org": ["#additional-info"],
+        "greasyfork.org": ["#additional-info",".user-content"],
         "segmentfault.com": ["#root"],
         "www.baidu.com": [".s_form"],
         "baike.baidu.com": [".content-wrapper", ".basic-info.J-basic-info.cmn-clearfix", ".para-title.level-2.J-chapter"],

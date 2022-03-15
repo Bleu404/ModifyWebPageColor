@@ -2,7 +2,7 @@
 // @name           去除页面中刺眼的白色
 // @namespace      https://greasyfork.org/zh-CN/users/798733-bleu
 // @description    支持自定义颜色,修改代码中的 #F6F4EC 为你喜欢的颜色
-// @version        1.0.1
+// @version        1.0.2
 // @author         bleu
 // @compatible     edge Tampermonkey
 // @compatible     chrome Tampermonkey

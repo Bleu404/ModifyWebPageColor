@@ -15,7 +15,6 @@
 (function () {
     'use strict';
     var color = "#F6F4EC";
-    var crgb = getRGB(color);
     var customMode = {
         "greasyfork.org": ["#additional-info",".user-content"],
         "segmentfault.com": ["#root"],
@@ -45,17 +44,18 @@
         function hex(x) {
             return ("0" + parseInt(x).toString(16)).slice(-2);
         }
+        if(!rgb)return[0];
         return [hex(rgb[1]),hex(rgb[2]),hex(rgb[3])];
     }
     function isChangeColor(hexcolor){
         return hexcolor.every((item)=>parseInt(item, 16)>0xf0);
     }
-    function getRGB(hex){
-        return 'rgb(' + parseInt('0x' + hex.slice(1, 3)) + ',' + parseInt('0x' + hex.slice(3, 5))
-          + ',' + parseInt('0x' + hex.slice(5, 7)) + ')';
+    function getRGB(hex,num){
+        return 'rgb(' + (parseInt('0x' + hex.slice(1, 3))-num) + ',' + (parseInt('0x' + hex.slice(3, 5))-num)
+          + ',' + (parseInt('0x' + hex.slice(5, 7))-num) + ')';
     }
     function changeElementColor(node){
-        if (node.style.backgroundColor === crgb||node.getAttribute("type")==="checkbox")return
+        if (node.style.backgroundColor === getRGB(color,0)||node.getAttribute("type")==="checkbox")return
         if (customModeDel[location.host]) {
             var temp = document.querySelector(customModeDel[location.host]);
             if (temp && temp.contains(node)) {
@@ -64,7 +64,7 @@
         }
         var temo = document.defaultView.getComputedStyle(node, "").getPropertyValue("background-Color");
         if (isChangeColor(rgb2hex(temo))) {
-            node.style.setProperty('background', color,'important');
+            node.style.setProperty('background', `radial-gradient(${getRGB(color,0)},${getRGB(color,15)})`,'important');
             node.style.setProperty('color','black');
         }
     }
@@ -89,7 +89,7 @@
                 subtree: true
             });
         } catch (e) {
-            console.log("sha diao baidu ！！！！！！！！");
+            console.log("sha diao baidu ! ! ! ! ! !");
             document.addEventListener('DOMNodeInserted', function (mutation) {
                 if (!mutation.target.style) {
                     return;
@@ -102,7 +102,7 @@
         if (customMode[location.host]) {
             customMode[location.host].forEach((item) => {
                 document.querySelectorAll(item).forEach((node) => {
-                    node.style.background = color;
+                    node.style.background = `radial-gradient(${getRGB(color,0)},${getRGB(color,15)})`;
                 })
             });
         }

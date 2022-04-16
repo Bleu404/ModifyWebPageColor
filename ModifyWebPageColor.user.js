@@ -9,7 +9,7 @@
 // @compatible     firefox Tampermonkey
 // @license        MIT
 // @include        *://*
-// @icon           https://img.icons8.com/ios-glyphs/60/000000/paint-palette--v1.png
+// @icon           https://cdn.jsdelivr.net/gh/Bleu404/PRPO@latest/png/color.png
 // @grant          none
 // ==/UserScript==
 (function () {

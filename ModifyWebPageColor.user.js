@@ -9,7 +9,7 @@
 // @compatible     firefox Tampermonkey
 // @license        MIT
 // @include        *://*
-// @icon           https://cdn.jsdelivr.net/gh/Bleu404/PRPO@latest/png/color.png
+// @icon           https://fastly.jsdelivr.net/gh/Bleu404/PRPO@latest/png/color.png
 // @grant          none
 // ==/UserScript==
 (function () {

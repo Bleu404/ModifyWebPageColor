@@ -29,8 +29,7 @@
         "www.bilibili.com": "#bilibiliPlayer",
         "v.qq.com": ".container_inner", 
         "www.iqiyi.com": "#flashOutter",
-        "www.imdb.com":".ipc-page-background.ipc-page-background--baseAlt.Hero__StyledPageBackground-sc-kvkd64-0.kQLMSa",
-        "www.youtube.com":"#player"
+        "www.youtube.com":".ytp-progress-bar"
     }
     changeAllElementsColor(document);
     fixAutoPage();
